@@ -16,10 +16,16 @@ class Compra:
         self.cliente = []
         self.lista = []
         
-    def add_produto(self,nome,valor,quant):
-        self.lista.append(Produto(nome,valor,quant))
-        
-    def add_cliente(self,nome,cpf,telefone):
+    def add_produto(self,nome=None,valor = 0 , quant = 0):
+            nome = input('Nome produto: ')
+            valor = int(input('Valor do produto: '))
+            quant = int(input('QTD Produto: '))
+            self.lista.append(Produto(nome,valor,quant)) 
+                 
+    def add_cliente(self):
+        nome = input('Nome cliente: ')
+        cpf = input('CPF: ')
+        telefone = input('Telefone: ')
         self.cliente.append(Cliente(nome,cpf,telefone))
         
     def procurar_produto(self,nome):
@@ -40,15 +46,15 @@ class Compra:
             return f'----- DADOS CLIENTE ----- \n Nome: {cl.nome} \n CPF: {cl.cpf} \n TEL: {cl.telefone}'
     
 
-if __name__ == '__main__':
+def main():
     compra1 = Compra()
-    compra1.add_cliente('Douglas Ferreira','059.181.441-29','61 994453346')
-    compra1.add_produto('Iphone 15 128gb',3000,2)
-    compra1.add_produto('Xiaomi Note 13',1750,3)
-    print(compra1,'\n')
+    compra1.add_cliente()
+    compra1.add_produto()
     compra1.exibir_produtos()
-    print('\n')
-    print(f'Valor Total: {compra1.valor_total()}')
+    print(compra1.valor_total())
+
+    
+main()
     
     
     
