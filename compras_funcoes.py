@@ -61,16 +61,6 @@ def main():
     print(compra1.valor_total())
     
 main()
-def main():
-    compra1 = Compra()
-    compra1.add_cliente()
-    compra1.add_produto()
-    compra1.exibir_produtos()
-    print(compra1.valor_total())
-    
-main()
-    
-    
     
     
     
