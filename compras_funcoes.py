@@ -17,10 +17,16 @@ class Compra:
         self.lista = []
         
     def add_produto(self,nome=None,valor = 0 , quant = 0):
+        
+        while True:
             nome = input('Nome produto: ')
             valor = int(input('Valor do produto: '))
             quant = int(input('QTD Produto: '))
             self.lista.append(Produto(nome,valor,quant)) 
+            confirme = input('Deseja inserir novo produto? [S\ N]')
+            if confirme == 'n':
+                break
+            else:'\n'
                  
     def add_cliente(self):
         nome = input('Nome cliente: ')
@@ -45,14 +51,22 @@ class Compra:
         for cl in self.cliente:
             return f'----- DADOS CLIENTE ----- \n Nome: {cl.nome} \n CPF: {cl.cpf} \n TEL: {cl.telefone}'
     
-
+def main():
+    compra1 = Compra()
+    compra1.add_cliente()
+    compra1.add_produto()
+    print('\n \n')
+    print(compra1)
+    compra1.exibir_produtos()
+    print(compra1.valor_total())
+    
+main()
 def main():
     compra1 = Compra()
     compra1.add_cliente()
     compra1.add_produto()
     compra1.exibir_produtos()
     print(compra1.valor_total())
-
     
 main()
     
