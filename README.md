@@ -1,5 +1,5 @@
-# Welcome to GitHub Desktop!
+Esse condigo e para vendas,
+onde receber os dados do cliente e dados do produto,
+pelo usuario e depois o apresenta formatado.
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
-
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+BY: Douglas Ferreira
